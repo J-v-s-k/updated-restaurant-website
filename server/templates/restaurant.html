@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Page</title>
+    <link rel="stylesheet" href="/CSS/restaurant.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/images/logo.png" alt="Logo">
+            <span class="company">Fork & Flame</span>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="/restaurant">Home</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/catering">Catering</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <a href="/onlineorders" class="cta">ORDER PICKUP & DELIVERY</a>
+            <div class="account-dropdown">
+                <img src="/images/user.png" alt="Account" class="account-icon hover-grow" id="accountIcon">
+                <div class="dropdown-content" id="accountDropdown" style="display: none;">
+                    <span id="accountName"></span>
+                    <a href="#" id="logoutButton">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="/images/sliding photos/ambiance3.png" style="width:100%">
+            <div class="text">
+                <h1>Elegance in every detail.</h1>
+                <p>Experience a warm and inviting atmosphere where every detail is designed to make you feel right at home.</p>
+                <a href="/restaurant" class="button">LEARN MORE</a>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/images/sliding photos/biryani.png" style="width:100%">
+            <div class="text">
+                <h1>Biryani:Layers of joy...</h1>
+                <p>Our biryani is a journey of flavors, crafted to perfection in every bite.</p>
+                <a href="/menu" class="button">LEARN MORE</a>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/images/sliding photos/cooldrink2.png" style="width:100%">
+            <div class="text">
+                <h1>Refreshment in every sip.</h1>
+                <p>Experience a warm and inviting atmosphere where every detail is designed to make you feel right at home.</p>
+                <a href="/menu" class="button">LEARN MORE</a>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/images/sliding photos/privateroom1.png" style="width:100%">
+            <div class="text">
+                <h1>Your private retreat.</h1>
+                <p>Experience dining in a world of your own—where privacy meets perfection.</p>
+                <a href="/privateevent" class="button">LEARN MORE</a>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/images/sliding photos/catering.png" style="width:100%">
+            <div class="text">
+                <h1>Catering with elegance.</h1>
+                <p>Transform your event with exceptional restaurant catering that delights and inspires.</p>
+                <a href="/catering" class="button">LEARN MORE</a>
+            </div>
+        </div>
+    
+        <!-- Navigation Buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+    <!-- Dots/Circles -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <section class="it-kitchen">
+        <h1>FORK & FLAME</h1>
+    </section>
+    <section class="promo-section">
+        <div class="promo-text">
+            <div class="promo-text-inner">
+                <h2>DELICIOUS, NUTRITIOUS, PROTEIN PACKED.</h2>
+                <p>Our easy-to-modify menu is full of healthy alternatives to your favorite flavors.</p>
+                <a href="../templates/menu1.html" class="menu-button">VIEW MENU</a>
+            </div>
+        </div>
+        <div class="promo-image">
+            <img src="/images/Home photos/salad-prep.jpg" alt="Salad Preparation">
+        </div>
+    </section>
+    <div class="largeimg largeimg1">
+        <img src="/images/Home photos/story.jpg" style="width: 100%;">
+        <div class="hp1">
+            <h1>OUR STORY</h1>
+            <p>We don't just serve food—we serve memories, moments, and a shared belief in the power of togetherness.</p>
+            <a href="#" class="anchor">LEARN MORE</a>
+        </div>
+    </div>
+    <section class="promo-section" style="margin-top:-4px;">
+    <div class="promo-image">
+        <img src="/images/Home photos/juice.jpg" alt="Salad Preparation">
+    </div>
+        <div class="promo-text">
+            <div class="promo-text-inner">
+                <h2>Address & Contact</h2>
+                <p style="font-size: 18px; text-align: ce">Phone: +91 6300874730<br><br>
+
+                    Email: forkandflame@gmail.com<br><br>
+                    
+                    Address: Fork & Flame, Near RVR College, Chowdavaram, Guntur</p>
+            </div>
+        </div>
+    </section>
+    <div class="icon-container">
+        <div class="icon-section">
+            <img src="/images/logo.png" alt="Fork & Flame Logo" class="footer-logo">
+            <span class="footer-company">Fork & Flame</span>
+        </div>
+        <div class="icon-section">
+            <ul class="quick-links">
+                <li><a href="/restaurant">Home</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/catering">Catering</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/onlineorders">Online Orders</a></li>
+                <li><a href="/reservetable">Reserve Table</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                <li><a href="/privateevent">Private Event</a></li>
+            </ul>
+        </div>
+        <div class="icon-section">
+            <a href="#" class="social-icon"><img src="/images/png/facebook.png" alt="Facebook Icon"></a>
+            <a href="#" class="social-icon"><img src="/images/png/social.png" alt="Instagram Icon"></a>
+            <a href="#" class="social-icon"><img src="/images/png/twitter.png" alt="Twitter Icon"></a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-buttons">
+                <a href="/reservetable">Reserve a Table</a>
+                <a href="/privateevent">Book a Private Event</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/JS/restaurant.js"></script>
+    <script src="/JS/auth.js"></script>
+    
+</body>
+
+</html>

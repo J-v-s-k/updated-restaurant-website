@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #FF6B35; /* Vibrant Orange */
+    --secondary-color: #00B8A9; /* Teal */
+    --background-color: #F6F7D7; /* Soft Cream */
+    --accent-color: #FF9A00; /* Warm Yellow */
+    --text-color: #333333; /* Dark Charcoal */
+    --navbar-color: #00A896; /* Darker Teal */
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    padding: 20px;
+}
+.header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    color: var(--primary-color);
+    font-size: 36px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.reservation-wrapper {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image, .container {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.container {
+    padding: 30px;
+}
+
+form {
+    height: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-row .form-group {
+    width: 48%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: var(--accent-color);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    padding: 30px;
+    border: 1px solid var(--secondary-color);
+    width: 80%;
+    max-width: 500px;
+    max-height: 90vh;
+    border-radius: 8px;
+    text-align: center;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.restaurant-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.restaurant-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.restaurant-name {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+#saveButton, #closeModal {
+    display: inline-block;
+    width: auto;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+}
+
+#saveButton:hover, #closeModal:hover {
+    background-color: var(--navbar-color);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(255, 154, 0, 0.5);
+}
+
+#bookingId, #reservedDate {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .reservation-wrapper {
+        flex-direction: column;
+    }
+
+    .hero-image, .container {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 200px;
+    }
+}
+
+.back-to-home-link {
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.back-to-home-link:hover {
+    background-color: var(--accent-color);
+}
+.restaurant-header h1 {
+    color: var(--primary-color);
+    font-size: 24px;
+    width: fit-content;
+    border-bottom: 2px solid var(--primary-color);
+}
+

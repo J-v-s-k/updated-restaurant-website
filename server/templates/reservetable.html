@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Table</title>
+    <link rel="stylesheet" href="/CSS/reservetable.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Reserve a Table</h1>
+    </div>
+    <div class="reservation-wrapper">
+        <div class="hero-image">
+            <img src="/images/table reserve/table1.jpg" alt="Table Reservation">
+        </div>
+        <div class="container">
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="occasion">Occasion:</label>
+                    <select id="occasion" name="occasion">
+                        <option value="">Select an occasion</option>
+                        <option value="birthday">Birthday</option>
+                        <option value="anniversary">Anniversary</option>
+                        <option value="business">Business</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit">Book a Table</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <div class="restaurant-header">
+                <img src="/images/logo.png" alt="Fork & Flame Logo" class="restaurant-logo">
+                <h1 class="restaurant-name">Fork & Flame</h1>
+            </div>
+            <h2>Reservation Confirmed</h2>
+            <p>Your table has been reserved!</p>
+            <p>Booking ID: <span id="bookingId"></span></p>
+            <p>Reserved Date: <span id="reservedDate"></span></p>
+            <button id="saveButton">Save as Screenshot</button>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+    <div class="back-to-home">
+        <a class="back-to-home-link" href="/restaurant">Back to Home</a>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="/JS/reservetable.js"></script>
+</body>
+</html>

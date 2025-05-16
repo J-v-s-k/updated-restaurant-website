@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FF6B35;
+    --secondary-color: #00B8A9;
+    --background-color: #F6F7D7;
+    --accent-color: #FF9A00;
+    --text-color: #333333;
+    --navbar-color: #00A896;
+}
+
+body {
+    font-family: 'poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.page-title {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: underline;
+    z-index: 1000;
+}
+
+.card-container {
+    display: flex;
+    overflow: hidden;
+    width: calc(100% - 80px);
+    height: calc(100vh - 120px);
+    margin: 60px auto 0;
+}
+
+.card {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    max-width: 50%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card h2 {
+    width: 50%;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.card-content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.per-hour {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.discount {
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.book-now {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-now:hover {
+    background-color: var(--accent-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.2rem;
+    }
+    
+    .card {
+        flex-direction: column;
+    }
+    
+    .card img,
+    .card-info {
+        width: 100%;
+    }
+    
+    .card img {
+        max-height: 50%;
+    }
+
+    .card-info {
+        padding: 1rem;
+    }
+}
+
+.scroll-buttons {
+    display: none;
+}
+
+.nav-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 107, 53, 0.7);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 107, 53, 1);
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    outline: none;
+    border-color: var(--navbar-color);
+}
+
+.date-time-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.date-time-container input {
+    width: 48%;
+}
+
+.submit-booking {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.submit-booking:hover {
+    background-color: var(--accent-color);
+}
+
+.card-content > *:not(.booking-form) {
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.card-content.form-visible > *:not(.booking-form) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    .card-content {
+        width: 100%;
+    }
+
+    .booking-form {
+        padding: 10px;
+    }
+
+    .booking-form input,
+    .booking-form select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .submit-booking {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+.cancel-booking {
+    background-color: #ccc;
+    color: var(--text-color);
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.cancel-booking:hover {
+    background-color: #999;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: #F6F7D7;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    text-align: center;
+    width: 500px;
+}
+
+.modal h2 {
+    color: #FF6B35;
+    margin-bottom: 10px;
+}
+
+.modal h3 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.modal p {
+    margin-bottom: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.restaurant-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.restaurant-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.restaurant-name {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.modal button {
+    background-color: #00B8A9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #00A896;
+}
+
+.hidden {
+    display: none;
+}

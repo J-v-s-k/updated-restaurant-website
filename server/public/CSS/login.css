@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #FF6B35;
+    --secondary-color: #00B8A9;
+    --background-color: #F6F7D7;
+    --accent-color: #FF9A00;
+    --text-color: #333333;
+    --navbar-color: #00A896;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('/images/food-pattern2.jpg') no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+input:focus {
+    border: none;
+    outline: 1px solid var(--accent-color);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 3px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--navbar-color);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#signupForm input {
+    margin-bottom: 1rem;
+}
+
+.options {
+    text-align: center;
+}
+
+.options a {
+    color: var(--accent-color);
+}
+
+.success-message {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 2px solid #4CAF50;
+    border-left: 10px solid #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    max-width: 80%;
+}
+
+.success-message h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 2px solid #f44336;
+    border-left: 10px solid #f44336;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.3);
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    max-width: 80%;
+}
+
+.error-message h2 {
+    color: #f44336;
+    margin-bottom: 10px;
+}
+

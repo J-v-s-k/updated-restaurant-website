@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/CSS/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="login-container" id="login-form">
+        <form id="admin-login-form">
+            <h2>Admin Login</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div class="admin-content" id="admin-content" style="display: none;">
+        <nav class="admin-navbar">
+            <div class="logo-container">
+                <img src="/images/logo.png" alt="Fork & Flame Logo" class="logo">
+                <span class="company-name">Fork & Flame</span>
+            </div>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </nav>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="#home" id="home-link" class="active">Home</a></li>
+                    <li><a href="#catering-orders" id="catering-orders-link">Catering Orders</a></li>
+                    <li><a href="#contacts" id="contacts-link">Contacts</a></li>
+                    <li><a href="#delivery-orders" id="delivery-orders-link">Delivery Orders</a></li>
+                    <li><a href="#orders" id="orders-link">Orders</a></li>
+                    <li><a href="#private-event-bookings" id="private-event-bookings-link">Private Event Bookings</a></li>
+                    <li><a href="#reservations" id="reservations-link">Reservations</a></li>
+                    <li><a href="#takeaway-orders" id="takeaway-orders-link">Takeaway Orders</a></li>
+                </ul>
+            </aside>
+            <main class="main-content">
+                <div id="home" class="content-section" >
+                    <h2 style="border-bottom: 2px solid var(--secondary-color); padding: 20px 0px;">Hello Vamsi Siva Krishna,Welcome to Admin Dashboard</h2>
+                    <p>Select a category from the sidebar to view details.</p>
+                </div>
+                <div id="catering-orders" class="content-section" style="display: none;">
+                    <h2>Catering Orders</h2>
+                </div>
+                <div id="contacts" class="content-section" style="display: none;">
+                    <h2>Contacts</h2>
+                </div>
+                <div id="delivery-orders" class="content-section" style="display: none;">
+                    <h2>Delivery Orders</h2>
+                </div>
+                <div id="orders" class="content-section" style="display: none;">
+                    <h2>Orders</h2>
+                </div>
+                <div id="private-event-bookings" class="content-section" style="display: none;">
+                    <h2>Private Event Bookings</h2>
+                </div>
+                <div id="reservations" class="content-section" style="display: none;">
+                    <h2>Reservations</h2>
+                </div>
+                <div id="takeaway-orders" class="content-section" style="display: none;">
+                    <h2>Takeaway Orders</h2>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="/JS/admin.js"></script>
+</body>
+</html>

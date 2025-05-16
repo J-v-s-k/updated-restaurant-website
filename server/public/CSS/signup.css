@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #FF6B35;
+    --secondary-color: #00B8A9;
+    --background-color: #F6F7D7;
+    --accent-color: #FF9A00;
+    --text-color: #333333;
+    --navbar-color: #00A896;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('/images/food-pattern2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    width: 500px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 3px;
+}
+input:focus{
+    border: none;
+    outline:1px solid var(--accent-color);
+}
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+label{
+    font-weight: bold;
+    margin-bottom: -15px;
+}
+
+button:hover {
+    background-color: var(--navbar-color);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+#signupForm input {
+    margin-bottom: 1rem;
+}
+
+.options {
+    text-align: center;
+}
+
+.options a {
+    color: var(--accent-color);
+}
